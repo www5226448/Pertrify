@@ -1,0 +1,66 @@
+[
+  {
+    "name": "CallArray",
+    "size": 4,
+    "type": "struct",
+    "members": [
+      {
+        "name": "to",
+        "type": "felt",
+        "offset": 0
+      },
+      {
+        "name": "selector",
+        "type": "felt",
+        "offset": 1
+      },
+      {
+        "name": "data_offset",
+        "type": "felt",
+        "offset": 2
+      },
+      {
+        "name": "data_len",
+        "type": "felt",
+        "offset": 3
+      }
+    ]
+  },
+  {
+    "name": "aggregate",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "call_array_len",
+        "type": "felt"
+      },
+      {
+        "name": "call_array",
+        "type": "CallArray*"
+      },
+      {
+        "name": "calldata_len",
+        "type": "felt"
+      },
+      {
+        "name": "calldata",
+        "type": "felt*"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "block_number",
+        "type": "felt"
+      },
+      {
+        "name": "retdata_len",
+        "type": "felt"
+      },
+      {
+        "name": "retdata",
+        "type": "felt*"
+      }
+    ],
+    "stateMutability": "view"
+  }
+]
